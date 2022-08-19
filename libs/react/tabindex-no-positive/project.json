@@ -1,0 +1,45 @@
+{
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/react/tabindex-no-positive/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/react/tabindex-no-positive",
+        "tsConfig": "libs/react/tabindex-no-positive/tsconfig.lib.json",
+        "project": "libs/react/tabindex-no-positive/package.json",
+        "entryFile": "libs/react/tabindex-no-positive/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/react/tabindex-no-positive/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/react/tabindex-no-positive/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/react/tabindex-no-positive"],
+      "options": {
+        "jestConfig": "libs/react/tabindex-no-positive/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

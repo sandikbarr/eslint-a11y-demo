@@ -1,0 +1,45 @@
+{
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/react/label-has-associated-control/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/react/label-has-associated-control",
+        "tsConfig": "libs/react/label-has-associated-control/tsconfig.lib.json",
+        "project": "libs/react/label-has-associated-control/package.json",
+        "entryFile": "libs/react/label-has-associated-control/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/react/label-has-associated-control/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/react/label-has-associated-control/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/react/label-has-associated-control"],
+      "options": {
+        "jestConfig": "libs/react/label-has-associated-control/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "extends": ["plugin:@nrwl/nx/react", "../../../.eslintrc.json"],
+  "ignorePatterns": ["!**/*"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {}
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "jsx-a11y/label-has-associated-control": [ 2, {
+          "labelComponents": ["label"],
+          "labelAttributes": ["id"],
+          "controlComponents": ["MyCustomControl"],
+          "depth": 3
+        }]
+      }
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "rules": {}
+    }
+  ]
+}

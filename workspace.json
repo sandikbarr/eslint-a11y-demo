@@ -2,7 +2,26 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
-    "demo-react": "apps/demo-react",
-    "demo-react-e2e": "apps/demo-react-e2e"
+    "angular-alt-text": "libs/angular/alt-text",
+    "angular-click-events-have-key-events": "libs/angular/click-events-have-key-events",
+    "angular-demo": "apps/angular-demo",
+    "angular-demo-e2e": "apps/angular-demo-e2e",
+    "angular-elements-content": "libs/angular/elements-content",
+    "angular-label-has-associated-control": "libs/angular/label-has-associated-control",
+    "angular-mouse-events-have-key-events": "libs/angular/mouse-events-have-key-events",
+    "angular-my-custom-components": "libs/angular/my-custom-components",
+    "angular-no-autofocus": "libs/angular/no-autofocus",
+    "angular-no-positive-tabindex": "libs/angular/no-positive-tabindex",
+    "react-alt-text": "libs/react/alt-text",
+    "react-click-events-have-key-events": "libs/react/click-events-have-key-events",
+    "react-demo": "apps/react-demo",
+    "react-demo-e2e": "apps/react-demo-e2e",
+    "react-has-content": "libs/react/has-content",
+    "react-interactive-supports-focus": "libs/react/interactive-supports-focus",
+    "react-label-has-associated-control": "libs/react/label-has-associated-control",
+    "react-mouse-events-have-key-events": "libs/react/mouse-events-have-key-events",
+    "react-my-custom-components": "libs/react/my-custom-components",
+    "react-no-autofocus": "libs/react/no-autofocus",
+    "react-tabindex-no-positive": "libs/react/tabindex-no-positive"
   }
 }

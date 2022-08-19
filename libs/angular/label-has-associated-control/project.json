@@ -1,0 +1,41 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/angular/label-has-associated-control/src",
+  "prefix": "eslint-a11y-demo",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/angular/label-has-associated-control"],
+      "options": {
+        "project": "libs/angular/label-has-associated-control/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/angular/label-has-associated-control/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/angular/label-has-associated-control/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/angular/label-has-associated-control"],
+      "options": {
+        "jestConfig": "libs/angular/label-has-associated-control/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/angular/label-has-associated-control/**/*.ts",
+          "libs/angular/label-has-associated-control/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

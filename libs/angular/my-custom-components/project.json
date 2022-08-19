@@ -1,0 +1,51 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/angular/my-custom-components/src",
+  "prefix": "my-custom",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["dist/libs/angular/my-custom-components"],
+      "options": {
+        "project": "libs/angular/my-custom-components/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/angular/my-custom-components/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/angular/my-custom-components/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/angular/my-custom-components"],
+      "options": {
+        "jestConfig": "libs/angular/my-custom-components/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/angular/my-custom-components/**/*.ts",
+          "libs/angular/my-custom-components/**/*.html",
+          "libs/angular/my-custom-components/control/**/*.ts",
+          "libs/angular/my-custom-components/control/**/*.html",
+          "libs/angular/my-custom-components/label/**/*.ts",
+          "libs/angular/my-custom-components/label/**/*.html",
+          "libs/angular/my-custom-components/button/**/*.ts",
+          "libs/angular/my-custom-components/button/**/*.html",
+          "libs/angular/my-custom-components/content/**/*.ts",
+          "libs/angular/my-custom-components/content/**/*.html",
+          "libs/angular/my-custom-components/auto-focus/**/*.ts",
+          "libs/angular/my-custom-components/auto-focus/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

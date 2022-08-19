@@ -1,0 +1,45 @@
+{
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/react/click-events-have-key-events/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/react/click-events-have-key-events",
+        "tsConfig": "libs/react/click-events-have-key-events/tsconfig.lib.json",
+        "project": "libs/react/click-events-have-key-events/package.json",
+        "entryFile": "libs/react/click-events-have-key-events/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/react/click-events-have-key-events/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/react/click-events-have-key-events/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/react/click-events-have-key-events"],
+      "options": {
+        "jestConfig": "libs/react/click-events-have-key-events/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

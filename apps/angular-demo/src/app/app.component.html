@@ -1,0 +1,40 @@
+<header>
+  <nav>
+    <ul>
+      <li>
+        <a [routerLink]="['alt-text']">Alt Text</a>
+      </li>
+      <li>
+        <a [routerLink]="['elements-content']"
+          >Elements That Must Have Content</a
+        >
+      </li>
+      <li>
+        <a [routerLink]="['label-has-associated-control']"
+          >Label Has Associated Control</a
+        >
+      </li>
+      <li>
+        <a [routerLink]="['click-events-have-key-events']"
+          >Click Events Must Have Key Events</a
+        >
+      </li>
+      <li>
+        <a [routerLink]="['mouse-events-have-key-events']"
+          >Mouse Events Must Have Key Events</a
+        >
+      </li>
+      <li>
+        <a [routerLink]="['no-positive-tabindex']"
+          >No Positive <code>tabindex</code></a
+        >
+      </li>
+      <li>
+        <a [routerLink]="['no-autofocus']">No <code>autofocus</code></a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>

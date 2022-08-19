@@ -14,7 +14,72 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@eslint-a11y-demo/angular/alt-text": [
+        "libs/angular/alt-text/src/index.ts"
+      ],
+      "@eslint-a11y-demo/angular/click-events-have-key-events": [
+        "libs/angular/click-events-have-key-events/src/index.ts"
+      ],
+      "@eslint-a11y-demo/angular/elements-content": [
+        "libs/angular/elements-content/src/index.ts"
+      ],
+      "@eslint-a11y-demo/angular/label-has-associated-control": [
+        "libs/angular/label-has-associated-control/src/index.ts"
+      ],
+      "@eslint-a11y-demo/angular/mouse-events-have-key-events": [
+        "libs/angular/mouse-events-have-key-events/src/index.ts"
+      ],
+      "@eslint-a11y-demo/angular/no-autofocus": [
+        "libs/angular/no-autofocus/src/index.ts"
+      ],
+      "@eslint-a11y-demo/angular/no-positive-tabindex": [
+        "libs/angular/no-positive-tabindex/src/index.ts"
+      ],
+      "@eslint-a11y-demo/react/alt-text": ["libs/react/alt-text/src/index.ts"],
+      "@eslint-a11y-demo/react/click-events-have-key-events": [
+        "libs/react/click-events-have-key-events/src/index.ts"
+      ],
+      "@eslint-a11y-demo/react/has-content": [
+        "libs/react/has-content/src/index.ts"
+      ],
+      "@eslint-a11y-demo/react/interactive-supports-focus": [
+        "libs/react/interactive-supports-focus/src/index.ts"
+      ],
+      "@eslint-a11y-demo/react/label-has-associated-control": [
+        "libs/react/label-has-associated-control/src/index.ts"
+      ],
+      "@eslint-a11y-demo/react/mouse-events-have-key-events": [
+        "libs/react/mouse-events-have-key-events/src/index.ts"
+      ],
+      "@eslint-a11y-demo/react/no-autofocus": [
+        "libs/react/no-autofocus/src/index.ts"
+      ],
+      "@eslint-a11y-demo/react/tabindex-no-positive": [
+        "libs/react/tabindex-no-positive/src/index.ts"
+      ],
+      "my-custom-components": [
+        "libs/angular/my-custom-components/src/index.ts"
+      ],
+      "my-custom-components/auto-focus": [
+        "libs/angular/my-custom-components/auto-focus/src/index.ts"
+      ],
+      "my-custom-components/button": [
+        "libs/angular/my-custom-components/button/src/index.ts"
+      ],
+      "my-custom-components/content": [
+        "libs/angular/my-custom-components/content/src/index.ts"
+      ],
+      "my-custom-components/control": [
+        "libs/angular/my-custom-components/control/src/index.ts"
+      ],
+      "my-custom-components/label": [
+        "libs/angular/my-custom-components/label/src/index.ts"
+      ],
+      "react-custom-components": [
+        "libs/react/my-custom-components/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

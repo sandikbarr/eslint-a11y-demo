@@ -1,0 +1,41 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/angular/elements-content/src",
+  "prefix": "eslint-a11y-demo",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/angular/elements-content"],
+      "options": {
+        "project": "libs/angular/elements-content/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/angular/elements-content/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/angular/elements-content/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/angular/elements-content"],
+      "options": {
+        "jestConfig": "libs/angular/elements-content/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/angular/elements-content/**/*.ts",
+          "libs/angular/elements-content/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
